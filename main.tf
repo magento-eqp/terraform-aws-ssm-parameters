@@ -1,3 +1,9 @@
+provider "aws" {
+  version             = ">= 2.70.0"
+  region              = var.aws_region
+  allowed_account_ids = ["${var.aws_account_id}"]
+}
+
 resource "aws_ssm_parameter" "parameters" {
   for_each = var.parameters
 
