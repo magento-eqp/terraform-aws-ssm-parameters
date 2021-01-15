@@ -1,3 +1,18 @@
+# ---------------------------------------------------------------------------------------------------------------------
+# REQUIRED PARAMETERS
+# These variables are expected to be passed in by the operator when calling this terraform module
+# ---------------------------------------------------------------------------------------------------------------------
+variable "aws_account_id" {
+  description = "AWS Account Number"
+  type        = string
+}
+
+variable "aws_region" {
+  description = "AWS Account Region in which to create the resource"
+  type        = string
+  default     = "us-east-1"
+}
+
 variable "name_prefix" {
   description = "Path used for each SSM parameter created by the module"
 }
